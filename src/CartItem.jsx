@@ -16,15 +16,27 @@ const CartItem = ({ onContinueShopping }) => {
     return total_cart_amount;
   };
 
-  // const total_cart_amount = calculateTotalAmount();
+  const total_cart_amount = calculateTotalAmount();
 
   const handleContinueShopping = (e) => {
-    dispatch(handleContinueShopping(e));
+    e.handleContinueShopping();
   };
 
-  const handleIncrement = (item) => {};
+  const handleCheckoutShopping = (e) => {
+    alert("Functionality to be added for future reference");
+  };
 
-  const handleDecrement = (item) => {};
+  const handleIncrement = (item) => {
+    item.quantity++;
+    dispatch(updateQuantity(item));
+  };
+
+  const handleDecrement = (item) => {
+    if (item.quantity > 0) {
+      item.quantity--;
+      dispatch(updateQuantity(item));
+    }
+  };
 
   const handleRemove = (item) => {};
 

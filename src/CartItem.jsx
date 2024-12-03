@@ -19,7 +19,7 @@ const CartItem = ({ onContinueShopping }) => {
   // const total_cart_amount = calculateTotalAmount();
 
   const handleContinueShopping = (e) => {
-    e.handleContinueShopping();
+    dispatch(handleContinueShopping(e));
   };
 
   const handleIncrement = (item) => {};

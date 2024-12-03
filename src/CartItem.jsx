@@ -11,7 +11,6 @@ const CartItem = ({ onContinueShopping }) => {
   const calculateTotalAmount = () => {
     let total_cart_amount = 0;
     cart.forEach((item) => {
-      console.log(item.cost + " " + item.quantity);
       total_cart_amount = total_cart_amount + item.quantity * item.cost;
     });
     return total_cart_amount;
